@@ -1,6 +1,9 @@
 import { SimplePseudos } from "csstype"
 
 const PSEUDO_CLASS_MAP: Record<SimplePseudos, true> = {
+  "::-ms-expand": true,
+  "::view-transition": true,
+  ":playing": true,
   ":-khtml-any-link": true,
   ":-moz-any-link": true,
   ":-moz-focusring": true,

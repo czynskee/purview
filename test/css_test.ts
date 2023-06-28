@@ -100,7 +100,9 @@ test("css many expansions", () => {
     paddingRight: "7px",
     paddingBottom: "10px",
     paddingLeft: "7px",
+    flexBasis: "0",
     flexGrow: "1",
+    flexShrink: "1",
   })
 })
 
@@ -131,7 +133,9 @@ test("css pseudo many expansions", () => {
       marginBottom: "5px",
       marginLeft: "5px",
     },
+    flexBasis: "0",
     flexGrow: "1",
+    flexShrink: "1",
   })
 })
 
@@ -401,6 +405,8 @@ test("getAtomicProperties", () => {
     { key: "marginBottom", value: "5px", pseudoClass: ":visited" },
     { key: "marginLeft", value: "5px", pseudoClass: ":visited" },
     { key: "flexGrow", value: "1" },
+    { key: "flexShrink", value: "1" },
+    { key: "flexBasis", value: "0" },
   ]
   expect(getAtomicProperties(cssAttr)).toEqual(aps)
 })

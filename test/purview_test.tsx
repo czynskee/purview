@@ -1063,11 +1063,15 @@ test.each([false, true])(
       ".p-c { padding-bottom: 0 }",
       ".p-d { padding-left: 10rem }",
       ".p-e { flex-grow: 1 }",
-      ".p-f:hover { outline-width: 2px }",
-      ".p-g:hover { outline-style: groove }",
-      ".p-h:hover { outline-color: yellow }",
+      ".p-f { flex-shrink: 1 }",
+      ".p-g { flex-basis: 0 }",
+      ".p-h:hover { outline-width: 2px }",
+      ".p-i:hover { outline-style: groove }",
+      ".p-j:hover { outline-color: yellow }",
     ])
-    expect(div.getAttribute("class")).toBe("p-a p-b p-c p-d p-e p-f p-g p-h")
+    expect(div.getAttribute("class")).toBe(
+      "p-a p-b p-c p-d p-e p-f p-g p-h p-i p-j",
+    )
   },
 )
 
